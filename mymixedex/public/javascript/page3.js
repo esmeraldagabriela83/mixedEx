@@ -94,3 +94,58 @@ concatInputValueBtn.addEventListener("click" , function(event){
     console.log("newNamesArr is : " , newNamesArr);
     namesParagraph.innerText=newNamesArr.join(" / ");
 })
+
+//--------------------------------------------------sort()
+
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+console.log("fruits3 is : " , fruits3);
+
+const fruits3paragraph=document.getElementById("fruits3paragraph");
+fruits3paragraph.style.padding="0.5em";
+fruits3paragraph.style.margin="0.5em";
+fruits3paragraph.style.border="1px solid olive";
+fruits3paragraph.innerText=fruits3.toString();
+
+fruits3.sort();
+console.log("fruits3 after sort() is : " , fruits3);
+
+
+const fruits3paragraphAfterSort=document.getElementById("fruits3paragraphAfterSort");
+fruits3paragraphAfterSort.style.padding="0.5em";
+fruits3paragraphAfterSort.style.margin="0.5em";
+fruits3paragraphAfterSort.style.border="1px solid magenta";
+fruits3paragraphAfterSort.innerText=fruits3.join(" / ");
+
+//-----sort() nr arr
+
+const arrNumbers=[975, 567, 5 , 78 , 90 , 67 , 200, 4 , 8, 44];
+
+const nrArrParagraph=document.getElementById("nrArrParagraph");
+nrArrParagraph.innerText=arrNumbers.join(" , ");
+
+arrNumbers.sort(function(a, b){return a - b});
+
+const nrArrParagraphAfterSort=document.getElementById("nrArrParagraphAfterSort");
+nrArrParagraphAfterSort.innerText=arrNumbers.toString();
+
+//-------------------------
+
+//https://www.w3schools.com/js/js_arrays.asp
+
+const myRoom = ["bed", "window", "book", "brochure" , "mirror" , "icon"];
+console.log("myRoom is : " , myRoom);
+console.log("nr de obiecte in camera mea" , myRoom.length);
+
+const roomParagraph=document.getElementById("roomParagraph");
+roomParagraph.innerText=myRoom.join(" , ");
+
+let textRoom="<ul>";
+
+for(let i=0 ; i<myRoom.length ; i++){
+    textRoom += "<li>" + myRoom[i] + "</li>";
+}
+
+textRoom += "</ul";
+
+const roomContainer=document.getElementById("roomContainer");
+roomContainer.innerHTML=textRoom;
