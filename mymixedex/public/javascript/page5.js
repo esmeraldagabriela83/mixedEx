@@ -44,9 +44,9 @@ brothersSection.innerHTML=textBrothers;
 
 let textBr = "<ul>";
 
-myBrothers.forEach(mySunction);
+myBrothers.forEach(myFunction);
 
-function mySunction(el){
+function myFunction(el){
     textBr += "<li>" + el + "</li>";
 }
 
@@ -57,3 +57,19 @@ textBr += "</ul>";
 const brothersSectionForEach=document.getElementById("brothersSectionForEach");
 
 brothersSectionForEach.innerHTML=textBr;
+
+//-------------------------------------concat()
+
+const concatElBtn=document.getElementById("concatElBtn");
+concatElBtn.style.color="yellowgreen";
+concatElBtn.style.fontWeight="bold";
+
+concatElBtn.addEventListener("click" , function(event){
+    event.preventDefault();
+    console.log("you clicked the concat btn");
+
+    this.style.backgroundColor="floralwhite";
+
+    const newConcatMyBrothers=myBrothers.concat(brotherInpuName.value);
+    myBrothersParagraph.innerText=newConcatMyBrothers.join(" / ");
+})
