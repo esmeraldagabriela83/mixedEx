@@ -83,14 +83,19 @@ const demoFrom=document.getElementById("demoFrom");
 demoFrom.innerText=myArr.join(" / ");
 
 
-//-------
+//-------------------------------------------------------------------------------------
 
 const stringUser=document.getElementById("stringUser");
-console.log("1 stringUser.value is : " , stringUser.value);
+stringUser.style.backgroundColor="MistyRose";
 
 const fromArrBtn=document.getElementById("fromArrBtn");
+fromArrBtn.style.color="forestgreen";
+fromArrBtn.style.fontWeight="bold";
 
 const nameLettersAndLength=document.getElementById("nameLettersAndLength");
+nameLettersAndLength.style.padding="0.5em";
+nameLettersAndLength.style.margin="0.5em";
+nameLettersAndLength.style.border="1px solid red";
 //----
 
 fromArrBtn.addEventListener("click" , function(event){
@@ -101,10 +106,24 @@ fromArrBtn.addEventListener("click" , function(event){
     this.style.backgroundColor="SlateGray";
 
     console.log("btn stringUser.value is : " , stringUser.value);
-
-let userArr=Array.from("bvbvvbbvbv");
-console.log(userArr);
-
-    nameLettersAndLength.innerText=userArr.join(" / ") + userArr.length;
+    nameLettersAndLength.innerText=Array.from(stringUser.value);
 })
 
+//----//---
+
+const userInput7page=document.getElementById("userInput7page");
+userInput7page.style.backgroundColor="Beige";
+
+const showInputValue=document.getElementById("showInputValue");
+showInputValue.style.color="green";
+
+const inputValueParagraph=document.getElementById("inputValueParagraph");
+
+showInputValue.addEventListener("click" , function(event){
+    event.preventDefault();
+    console.log("you clicked the show user value btn");
+
+    this.style.backgroundColor="pink";
+    console.log(userInput7page.value);
+    inputValueParagraph.innerText=(Array.from(userInput7page.value)).join(" / ") + " length: " + (userInput7page.value).length;
+})
