@@ -168,7 +168,7 @@ function showCatsCallbackFunc(item){
   <div class="card" style="width: 18rem; margin:0.5em">
   <img src="${item.imgCat}" class="card-img-top" alt="my_cat_obj">
   <div class="card-body">
-    <h5 class="card-title">${item.title}</h5>
+    <h5 class="card-title" style="color:${item.color}">${item.title}</h5>
     <p class="card-text">${item.textCat}</p>
     <a href="https://www.pexels.com/ro-ro/cauta/cats/"  target="_blank" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -195,36 +195,36 @@ const foods=[
   {
     index:1,
     title:"icecream",
-    imgCat:"https://images.pexels.com/photos/675439/pexels-photo-675439.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    textCat:"lorem ipsum icecream",
+    imgFood:"https://images.pexels.com/photos/675439/pexels-photo-675439.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    textFood:"lorem ipsum icecream",
     color:"cornflowerblue"
   },
   {
     index:2,
     title:"cake",
-    imgCat:"https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    textCat:"lorem ipsum cake",
+    imgFood:"https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    textFood:"lorem ipsum cake",
     color:"gold"
   },
   {
     index:3,
     title:"pizza",
-    imgCat:"https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    textCat:"lorem ipsum pizza",
+    imgFood:"https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    textFood:"lorem ipsum pizza",
     color:"magenta"
   },
   {
     index:4,
     title:"soup",
-    imgCat:"https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    textCat:"lorem ipsum soup",
+    imgFood:"https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    textFood:"lorem ipsum soup",
     color:"green"
   },
   {
     index:5,
     title:"burger",
-    imgCat:"https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    textCat:"lorem ipsum burger",
+    imgFood:"https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    textFood:"lorem ipsum burger",
     color:"cyan"
   },
 ];
@@ -232,8 +232,35 @@ const foods=[
 const showMapFoodBtn=document.getElementById("showMapFoodBtn");
 console.log("showMapFoodBtn is : " , showMapFoodBtn);
 showMapFoodBtn.style.color="magenta";
+showMapFoodBtn.style.fontWeight="bold";
 
+showMapFoodBtn.addEventListener("click" , function(event){
+  event.preventDefault();
+  console.log("you clicked the show food map btn");
 
+  this.style.color="DodgerBlue";
+
+  //-------------
+
+  foods.map(callbackFuncFood)
+
+  function callbackFuncFood(item){
+
+    contentFood +=`
+    <div class="card" style="width: 18rem;margin:0.5em">
+  <img src="${item.imgFood}" class="card-img-top" alt="food_item_alt">
+  <div class="card-body">
+    <h5 class="card-title" style="color:${item.color}">${item.title}</h5>
+    <p class="card-text">${item.textFood}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    `
+    foodArticle.innerHTML=contentFood;
+  }
+
+  //--------------
+})
 
 
 

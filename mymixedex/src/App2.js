@@ -17,6 +17,26 @@ function App2() {
 <li><a href="page10.html">page10.html</a></li>
 </ul>
 
+
+<nav aria-label="Page navigation example">
+  <ul className="pagination">
+    <li className="page-item">
+      <a className="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li className="page-item"><a className="page-link" href="page11.html">11</a></li>
+    <li className="page-item"><a className="page-link" href="page12.html">12</a></li>
+    <li className="page-item"><a className="page-link" href="page13.html">13</a></li>
+    <li className="page-item">
+      <a className="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
         <section className="App">
  <User propColor={"deeppink"} propNr={63} propText={"User"}/>
     </section>

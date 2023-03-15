@@ -1,0 +1,1 @@
+console.log("hello page 12 js");
