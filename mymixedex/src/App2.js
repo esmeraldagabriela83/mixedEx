@@ -6,7 +6,8 @@ function App2() {
 
     <>
 
-<ul className="container" style={{padding:"0.5em" , margin:"0.5em" , border:"1px solid cyan"}}>
+<div className="container">
+<ul style={{padding:"0.5em" , margin:"0.5em" , border:"1px solid cyan"}}>
 <li><a href="page3.html">page3.html</a></li>
 <li><a href="page4.html">page4.html</a></li>
 <li><a href="page5.html">page5.html</a></li>
@@ -16,6 +17,8 @@ function App2() {
 <li><a href="page9.html">page9.html</a></li>
 <li><a href="page10.html">page10.html</a></li>
 </ul>
+</div>
+
 
 
 <nav aria-label="Page navigation example">
@@ -28,6 +31,8 @@ function App2() {
     <li className="page-item"><a className="page-link" href="page11.html">11</a></li>
     <li className="page-item"><a className="page-link" href="page12.html">12</a></li>
     <li className="page-item"><a className="page-link" href="page13.html">13</a></li>
+    <li className="page-item"><a className="page-link" href="page14.html">14</a></li>
+    <li className="page-item"><a className="page-link" href="page15.html">15</a></li>
     <li className="page-item">
       <a className="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>

@@ -212,7 +212,7 @@ filterWaterProductsBtn.addEventListener("click" , function(event){
 
     <img src="${waterFoodsArr[j].imgFood}" class="card-img-top" alt="water_alt">
     <div class="card-body">
-      <h5 class="card-title" style="${waterFoodsArr[j].color}">${waterFoodsArr[j].title}</h5>
+      <h5 class="card-title" style="color:${waterFoodsArr[j].color}">${waterFoodsArr[j].title}</h5>
       <p class="card-text" style="color:${waterFoodsArr[j].color}">${waterFoodsArr[j].textFood}</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
